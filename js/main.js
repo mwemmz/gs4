@@ -112,7 +112,7 @@
 
   var statusEl = document.getElementById("form-status");
   var submitBtn = document.getElementById("form-submit");
-  var siteEmail = "info@secureguardzambia.zm";
+  var siteEmail = "sales@zm.g4s.com";
 
   function setStatus(message, type) {
     statusEl.textContent = message;

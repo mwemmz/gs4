@@ -1,11 +1,14 @@
-# SecureGuard Zambia
+# G4S Zambia — Student Concept Site
 
-Project repository for a generated static website for a concept Zambian security services company. Placeholder brand, imagery and copy only.
+A student coursework project: a static website modelled on **G4S Secure Solutions Zambia Ltd** (HQ: Plot 3144, Mukwa Road, Lusaka; operating since 1968; phone +260 211 244 832; sales@zm.g4s.com).
+
+> **Not affiliated with G4S, G4S Secure Solutions Zambia Ltd, or Allied Universal.** All guard/quote imagery, icons, testimonial quotes and statistics beyond the facts listed above are placeholders. The shield logo is an original placeholder icon, NOT the G4S logo. The site is marked `noindex, nofollow` and displays a visible disclaimer banner, and should be treated as coursework only — take it down before any public/production use.
 
 ## Stack
 
 - Plain HTML, CSS, vanilla JavaScript. No build step, no runtime server, no database.
-- Contact form handled by a [Cloudflare Pages Function](https://developers.cloudflare.com/pages/functions/) (`/functions/contact.js`), which forwards submissions to a third-party endpoint (e.g. Formspree) set via an environment variable. If the Page Function is unreachable or unconfigured, the browser falls back to a `mailto:` link.
+- Contact form handled by a [Cloudflare Pages Function](https://developers.cloudflare.com/pages/functions/) (`/functions/contact.js`), which forwards submissions to a third-party endpoint (e.g. Formspree) set via an environment variable. If the Page Function is unreachable or unconfigured, the browser falls back to a `mailto:` link (addressed to `sales@zm.g4s.com`).
+- The page intentionally includes a visible "student concept, not affiliated with G4S" banner and a `noindex, nofollow` robots meta tag.
 
 ## Project structure
 
@@ -60,7 +63,7 @@ If `FORMSPREE_ENDPOINT` is not set, the Function still returns success in "demo 
 ### Custom domain
 
 1. In the Pages project, go to **Custom domains → Set up a custom domain**.
-2. Type your domain (e.g. `secureguardzambia.zm` — buy the TLD from any registrar once you actually launch with it).
+2. Type your domain (choose a neutral/own domain — do not register `g4s`-infringing domains; it is a coursework concept).
 3. Follow the instructions to update DNS at your registrar with the Cloudflare-assigned nameservers (for Cloudflare-registered domains) or the `CNAME` record Cloudflare shows you (external registrar).
 4. Wait for propagation (up to a few hours). Cloudflare auto-provisions a TLS certificate.
 
@@ -80,6 +83,7 @@ The hero and About images are hot-linked Unsplash CDN placeholders. Replace them
 
 ## Content notes
 
-- All quotes, names and figures are placeholders.
-- Branch addresses/phones are fictional examples — replace before launch.
-- Map is an OpenStreetMap embed centred on Lusaka; swap the embed URL for a Google Maps embed if preferred.
+- Verifiable facts used from G4S Zambia's public site: legal name, founding year (1968), head office address and contact details, broad service categories (guarding, electronic security, cash solution, diplomatic/commercial/government customers), and the "G4S, An Allied Universal Company" parentage.
+- All quotes, client names, branch addresses, staff counts and statistics are placeholders — the counters on the page are illustrative, not G4S figures.
+- The hero/About photos are Unsplash CDN placeholders; the map is an OpenStreetMap embed centred on Lusaka and does not mark the true company location.
+- Do NOT ship to production, register the brand, or pass any of this off as the real company. The site exists purely to demonstrate front-end skills for coursework.
