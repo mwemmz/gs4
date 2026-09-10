@@ -350,7 +350,7 @@ h3 a, h2 a {
   color: #fff;
   background:
     linear-gradient(180deg, rgba(10, 19, 34, 0.82), rgba(5, 8, 15, 0.92)),
-    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80")
+    url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Security_guard_at_Cape_Town_train_station.jpg/1920px-Security_guard_at_Cape_Town_train_station.jpg")
       center / cover no-repeat,
     linear-gradient(135deg, var(--navy-800), var(--navy-950));
   min-height: 88vh;

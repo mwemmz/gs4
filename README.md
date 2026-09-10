@@ -75,7 +75,7 @@ npx wrangler pages deploy . --project-name secureguard-zambia
 
 ## Replacing placeholder imagery
 
-The hero and About images are hot-linked Unsplash CDN placeholders. Replace them with your own licensed photos:
+The hero and About images are hot-linked Wikimedia Commons placeholders. Replace them with your own licensed photos when you have access to actual imagery:
 
 1. Add files under `assets/img/` (e.g. `hero-guard.jpg`, `team.jpg`).
 2. In `css/style.css`, change the `url(...)` in the `.hero` background rule.
@@ -85,5 +85,5 @@ The hero and About images are hot-linked Unsplash CDN placeholders. Replace them
 
 - Verifiable facts used from G4S Zambia's public site: legal name, founding year (1968), head office address and contact details, broad service categories (guarding, electronic security, cash solution, diplomatic/commercial/government customers), and the "G4S, An Allied Universal Company" parentage.
 - All quotes, client names, branch addresses, staff counts and statistics are placeholders — the counters on the page are illustrative, not G4S figures.
-- The hero/About photos are Unsplash CDN placeholders; the map is an OpenStreetMap embed centred on Lusaka and does not mark the true company location.
+- Images are royalty-free **Wikimedia Commons** photos chosen to reflect the African brand: the hero uses a South African security guard at Cape Town, and the About panel uses the Lusaka skyline. They were selected from file titles (the author could not preview the images), so treat them as provisional and swap in licensed photos before any wider use. Download them into `assets/img/` and reference local files if you prefer not to hotlink.
 - Do NOT ship to production, register the brand, or pass any of this off as the real company. The site exists purely to demonstrate front-end skills for coursework.
