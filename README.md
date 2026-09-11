@@ -1,14 +1,14 @@
-# G4S Zambia — Student Concept Site
+# G Force Security — Student Concept Site
 
-A student coursework project: a static website modelled on **G4S Secure Solutions Zambia Ltd** (HQ: Plot 3144, Mukwa Road, Lusaka; operating since 1968; phone +260 211 244 832; sales@zm.g4s.com).
+A student coursework project: a static website for **G Force Security**, a fictional Zambian security services company (guarding, risk consulting, cash-in-transit and electronic security).
 
-> **Not affiliated with G4S, G4S Secure Solutions Zambia Ltd, or Allied Universal.** All guard/quote imagery, icons, testimonial quotes and statistics beyond the facts listed above are placeholders. The shield logo is an original placeholder icon, NOT the G4S logo. The site is marked `noindex, nofollow` and displays a visible disclaimer banner, and should be treated as coursework only — take it down before any public/production use.
+> **Not affiliated with any real company.** All company name, addresses, phone numbers, emails, statistics, quotes and copy are made-up placeholders. The shield logo is an original placeholder icon. The site is marked `noindex, nofollow`, displays a visible disclaimer banner, and should be treated as coursework only — take it down before any public/production use.
 
 ## Stack
 
 - Plain HTML, CSS, vanilla JavaScript. No build step, no runtime server, no database.
-- Contact form handled by a [Cloudflare Pages Function](https://developers.cloudflare.com/pages/functions/) (`/functions/contact.js`), which forwards submissions to a third-party endpoint (e.g. Formspree) set via an environment variable. If the Page Function is unreachable or unconfigured, the browser falls back to a `mailto:` link (addressed to `sales@zm.g4s.com`).
-- The page intentionally includes a visible "student concept, not affiliated with G4S" banner and a `noindex, nofollow` robots meta tag.
+- Contact form handled by a [Cloudflare Pages Function](https://developers.cloudflare.com/pages/functions/) (`/functions/contact.js`), which forwards submissions to a third-party endpoint (e.g. Formspree) set via an environment variable. If the Page Function is unreachable or unconfigured, the browser falls back to a `mailto:` link (addressed to `info@gforcesecurity.zm`).
+- The page intentionally includes a visible "student concept, not affiliated with any real company" banner and a `noindex, nofollow` robots meta tag.
 
 ## Project structure
 
@@ -63,7 +63,7 @@ If `FORMSPREE_ENDPOINT` is not set, the Function still returns success in "demo 
 ### Custom domain
 
 1. In the Pages project, go to **Custom domains → Set up a custom domain**.
-2. Type your domain (choose a neutral/own domain — do not register `g4s`-infringing domains; it is a coursework concept).
+2. Type your domain (use a neutral, own domain of your choosing — this is a coursework concept for a fictional brand).
 3. Follow the instructions to update DNS at your registrar with the Cloudflare-assigned nameservers (for Cloudflare-registered domains) or the `CNAME` record Cloudflare shows you (external registrar).
 4. Wait for propagation (up to a few hours). Cloudflare auto-provisions a TLS certificate.
 
@@ -83,7 +83,7 @@ The hero and About images live in `assets/img/` (`hero-guard.jpg`, `lusaka.jpg`)
 
 ## Content notes
 
-- Verifiable facts used from G4S Zambia's public site: legal name, founding year (1968), head office address and contact details, broad service categories (guarding, electronic security, cash solution, diplomatic/commercial/government customers), and the "G4S, An Allied Universal Company" parentage.
-- All quotes, client names, branch addresses, staff counts and statistics are placeholders — the counters on the page are illustrative, not G4S figures.
-- Images are royalty-free **Wikimedia Commons** photos now stored locally under `assets/img/` (hero: South African security guard; about: Lusaka skyline). They were selected from file titles (the author could not preview the images), so treat them as provisional and swap in licensed photos before any wider use.
-- Do NOT ship to production, register the brand, or pass any of this off as the real company. The site exists purely to demonstrate front-end skills for coursework.
+- Every fact on the page is fictional placeholder content: the company, founding year, address, phone, email, branch list, quotes, staff counts and statistics are illustrative only — including the animated counters.
+- The copy, layout and behaviour are inspired by the design brief for a fictional security brand; no real company, logo or text is reproduced.
+- Images are royalty-free **Wikimedia Commons** photos stored locally under `assets/img/` (hero: South African security guard; about: Lusaka skyline). They were selected from file titles (the author could not preview the images), so treat them as provisional and swap in licensed photos before any wider use.
+- Do NOT ship to production, register the brand, or pass any of this off as a real company. The site exists purely to demonstrate front-end skills for coursework.

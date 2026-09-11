@@ -112,7 +112,7 @@
 
   var statusEl = document.getElementById("form-status");
   var submitBtn = document.getElementById("form-submit");
-  var siteEmail = "sales@zm.g4s.com";
+  var siteEmail = "info@gforcesecurity.zm";
 
   function setStatus(message, type) {
     statusEl.textContent = message;
