@@ -1,139 +1,75 @@
 (function () {
   "use strict";
 
-  var header = document.getElementById("site-header");
-  var navToggle = document.getElementById("nav-toggle");
-  var primaryNav = document.getElementById("primary-nav");
   var footerYear = document.getElementById("footer-year");
-
   if (footerYear) {
     footerYear.textContent = String(new Date().getFullYear());
   }
 
-  function onScroll() {
-    if (!header) return;
-    header.classList.toggle("scrolled", window.pageYOffset > 12);
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  function closeNav() {
-    if (!primaryNav || !navToggle) return;
-    primaryNav.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
-    navToggle.setAttribute("aria-label", "Toggle navigation");
-  }
-
-  if (navToggle && primaryNav) {
-    navToggle.addEventListener("click", function () {
-      var open = primaryNav.classList.toggle("is-open");
-      navToggle.setAttribute("aria-expanded", String(open));
-      navToggle.setAttribute("aria-label", open ? "Close navigation" : "Toggle navigation");
-    });
-
-    primaryNav.addEventListener("click", function (e) {
-      if (e.target.closest("a")) closeNav();
-    });
-  }
-
-  document.addEventListener("click", function (e) {
-    if (!primaryNav || !primaryNav.classList.contains("is-open")) return;
-    if (!primaryNav.contains(e.target) && !navToggle.contains(e.target)) closeNav();
-  });
-
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape") closeNav();
-  });
-
-  var revealEls = document.querySelectorAll(".reveal");
-  if ("IntersectionObserver" in window) {
-    var revealObserver = new IntersectionObserver(
-      function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("revealed");
-            revealObserver.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
-    );
-    revealEls.forEach(function (el) {
-      revealObserver.observe(el);
-    });
-  } else {
-    revealEls.forEach(function (el) {
-      el.classList.add("revealed");
-    });
-  }
-
-  function animateCount(el) {
-    var target = parseInt(el.getAttribute("data-target"), 10);
-    var suffix = el.getAttribute("data-suffix") || "";
-    var duration = 1300;
-    var start = null;
-
-    function step(ts) {
-      if (!start) start = ts;
-      var progress = Math.min((ts - start) / duration, 1);
-      var eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(target * eased) + suffix;
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      }
+  function ready() {
+    if (reduce || !Element.prototype.animate) {
+      document.querySelectorAll("[data-reveal]").forEach(function (el) {
+        el.style.opacity = "1";
+      });
+      return;
     }
-    requestAnimationFrame(step);
-  }
 
-  var counters = document.querySelectorAll(".count");
-  if (counters.length && "IntersectionObserver" in window) {
-    var countObserver = new IntersectionObserver(
+    var ease = "cubic-bezier(0.23, 1, 0.32, 1)";
+    document.querySelectorAll("[data-hero]").forEach(function (el, i) {
+      el.animate(
+        [{ opacity: 0, transform: "translateY(16px)" }, { opacity: 1, transform: "none" }],
+        { duration: 800, delay: 120 + i * 70, easing: ease, fill: "backwards" }
+      );
+    });
+
+    if (!("IntersectionObserver" in window)) return;
+    var vh = window.innerHeight;
+    var els = Array.prototype.filter.call(
+      document.querySelectorAll("[data-reveal]"),
+      function (el) { return el.getBoundingClientRect().top > vh; }
+    );
+    els.forEach(function (el) { el.style.opacity = "0"; });
+
+    var batch = 0;
+    var io = new IntersectionObserver(
       function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            animateCount(entry.target);
-            countObserver.unobserve(entry.target);
-          }
+        entries.filter(function (e) { return e.isIntersecting; }).forEach(function (e) {
+          var el = e.target;
+          io.unobserve(el);
+          var a = el.animate(
+            [{ opacity: 0, transform: "translateY(18px)" }, { opacity: 1, transform: "none" }],
+            { duration: 650, delay: (batch++ % 6) * 60, easing: ease, fill: "backwards" }
+          );
+          el.style.opacity = "";
+          a.onfinish = function () { batch = 0; };
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
-    counters.forEach(function (el) {
-      countObserver.observe(el);
-    });
-  } else {
-    counters.forEach(function (el) {
-      el.textContent = el.getAttribute("data-target") + (el.getAttribute("data-suffix") || "");
-    });
+    els.forEach(function (el) { io.observe(el); });
   }
+
+  ready();
 
   var form = document.getElementById("contact-form");
   if (!form) return;
 
   var statusEl = document.getElementById("form-status");
   var submitBtn = document.getElementById("form-submit");
-  var siteEmail = "info@gforcesecurity.zm";
+  var siteEmail = "gforcesecure11@gmail.com";
 
   function setStatus(message, type) {
     statusEl.textContent = message;
     statusEl.className = "form-status" + (type ? " " + type : "");
+    statusEl.hidden = !message;
   }
 
-  function mailFallback(data) {
-    var subject = "Security survey request from " + (data.name || "website enquiry");
-    var body = [
-      "Name: " + (data.name || ""),
-      "Company: " + (data.company || ""),
-      "Email: " + (data.email || ""),
-      "Phone: " + (data.phone || ""),
-      "",
-      "Message:",
-      data.message || ""
-    ].join("\n");
-    window.location.href =
-      "mailto:" + siteEmail +
-      "?subject=" + encodeURIComponent(subject) +
-      "&body=" + encodeURIComponent(body);
+  function mailFallback(d) {
+    var subject = "Security survey request from " + (d.name || "website");
+    var body = ["Name: " + (d.name || ""), "Company: " + (d.company || ""), "Email: " + (d.email || ""), "Phone: " + (d.phone || ""), "", d.message || ""].join("\n");
+    window.location.href = "mailto:" + siteEmail + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
   }
 
   form.addEventListener("submit", function (e) {
@@ -143,37 +79,28 @@
       return;
     }
 
-    var data = {
-      name: form.name.value.trim(),
-      company: form.company.value.trim(),
-      email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
-      message: form.message.value.trim()
-    };
+    var d = {};
+    ["name", "company", "email", "phone", "message"].forEach(function (k) {
+      d[k] = form.elements[k].value.trim();
+    });
 
     submitBtn.disabled = true;
-    setStatus("Sending your enquiry...", "loading");
+    setStatus("Sending your request...", "");
 
     fetch("/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(data)
+      body: JSON.stringify(d)
     })
-      .then(function (res) {
-        if (!res.ok) throw new Error("send failed");
-        return res.json();
-      })
-      .then(function (json) {
-        if (json && json.success) {
-          setStatus("Thank you. Your enquiry has been sent — we will reply within one working day.", "success");
-          form.reset();
-        } else {
-          throw new Error("not accepted");
-        }
+      .then(function (r) { if (!r.ok) throw new Error("failed"); return r.json(); })
+      .then(function (j) {
+        if (!j || !j.success) throw new Error("rejected");
+        setStatus("Thank you. Your request has been received and our team will be in touch.", "success");
+        form.reset();
       })
       .catch(function () {
-        setStatus("Online form unavailable — opening your email app to complete the request.", "error");
-        mailFallback(data);
+        setStatus("Web form unavailable — opening your email app to send the request.", "error");
+        mailFallback(d);
       })
       .finally(function () {
         submitBtn.disabled = false;

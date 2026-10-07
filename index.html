@@ -3,461 +3,261 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>G Force Security | Security Services in Zambia (Student Concept)</title>
-  <meta name="description" content="Student concept site for a fictional Zambian security company — professional security guarding, risk management, cash-in-transit and electronic security across Zambia. Coursework placeholder.">
+  <title>G Force Security | Professional. Alert. Reliable.</title>
+  <meta name="description" content="G Force Security, Lusaka. Manned guarding, K9 units, CCTV, alarm systems and VIP protection for businesses and homes. Student concept site, not affiliated with any real company.">
   <meta name="robots" content="noindex, nofollow">
-  <meta property="og:title" content="G Force Security | Security Services (Student Concept)">
-  <meta property="og:description" content="Student concept site for a fictional Zambian security company. Coursework placeholder — not affiliated with any real company.">
+  <meta property="og:title" content="G Force Security | Professional. Alert. Reliable.">
+  <meta property="og:description" content="Guarding, K9 units, electronic security and VIP protection in Lusaka, Zambia. Student concept site.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="_ds/modernist-c8f90887-7c83-4b1c-8b31-27d0b24e1912/styles.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body { margin: 0; background: var(--color-neutral-900); color: var(--color-bg); text-wrap: pretty; }
+    a { color: var(--color-bg); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    a:hover { color: var(--color-accent-300); }
+    section[id], main[id] { scroll-margin-top: 74px; }
+
+    .notice {
+      background: var(--color-accent);
+      color: var(--color-bg);
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 20px;
+    }
+    .notice p { margin: 0; }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 28px;
+      padding: 14px clamp(20px, 5vw, 64px);
+      background: color-mix(in srgb, var(--color-neutral-900) 72%, transparent);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid color-mix(in srgb, var(--color-bg) 12%, transparent);
+    }
+    .site-nav a.site-brand {
+      text-decoration: none;
+      margin-right: auto;
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      font-family: var(--font-heading);
+      font-weight: var(--font-heading-weight);
+      font-size: 19px;
+      letter-spacing: -0.01em;
+    }
+    .site-nav a.site-brand span { font-weight: 400; color: color-mix(in srgb, var(--color-bg) 70%, transparent); }
+    .nav-link { text-decoration: none; font-size: 15px; white-space: nowrap; }
+
+    .photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .img-panel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        radial-gradient(120% 120% at 30% 10%, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 62%),
+        var(--color-neutral-800);
+    }
+    .img-panel svg {
+      width: 56px;
+      height: 56px;
+      stroke: color-mix(in srgb, var(--color-bg) 45%, transparent);
+      stroke-width: 1.5;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .form-status {
+      margin: 0;
+      padding: 12px 14px;
+      background: var(--color-neutral-900);
+      line-height: 1.5;
+      border: 1px solid color-mix(in srgb, var(--color-bg) 10%, transparent);
+    }
+    .form-status.success { color: #7fd1a0; }
+    .form-status.error { color: var(--color-accent-300); }
+  </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <div class="project-notice" role="note">
-    <p><strong>Student concept project.</strong> Not affiliated with any real company. Placeholder design for coursework only &mdash; no official logos or copy.</p>
+  <div class="notice" role="note">
+    <p><strong>Student concept project.</strong> Not affiliated with any real company. Placeholder design for coursework only.</p>
   </div>
 
-  <svg xmlns="http://www.w3.org/2000/svg" class="svg-sprite" aria-hidden="true" focusable="false">
-    <defs>
-      <symbol id="icon-shield" viewBox="0 0 24 24">
-        <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z"/>
-      </symbol>
-      <symbol id="icon-shield-check" viewBox="0 0 24 24">
-        <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z"/>
-        <path d="m9 11.5 2 2 4-4"/>
-      </symbol>
-      <symbol id="icon-chart" viewBox="0 0 24 24">
-        <path d="M3 3v18h18"/>
-        <path d="M7 15v-4M12 15V8M17 15v-7"/>
-      </symbol>
-      <symbol id="icon-coins" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="9"/>
-        <path d="M14.5 9.5c-1.9.2-3-.9-1.9-1.5M9.5 11.4c.8.5 2.4 1.6 2.4 2.7 0 1.4-1.6 2-4 1.7"/>
-      </symbol>
-      <symbol id="icon-cctv" viewBox="0 0 24 24">
-        <path d="M3 9h12v10H3z"/>
-        <path d="M15 9l4-2v8l-4-2"/>
-        <path d="M9 19v-5M9 9v2"/>
-        <circle cx="9" cy="14" r="1"/>
-        <path d="M6 19H4"/>
-      </symbol>
-      <symbol id="icon-landmark" viewBox="0 0 24 24">
-        <path d="M4 20h16M6 20v-8M10 20v-8M14 20v-8M18 20v-8"/>
-        <path d="M3 11h18L12 3 3 11z"/>
-      </symbol>
-      <symbol id="icon-bank" viewBox="0 0 24 24">
-        <path d="M3 20h18M4 20V11M20 20V11M2 11h20"/>
-        <path d="M12 3 2 8h20L12 3z"/>
-        <path d="M9 11v4M15 11v4"/>
-      </symbol>
-      <symbol id="icon-pickaxe" viewBox="0 0 24 24">
-        <path d="M14.5 6.5 20 12l-1.5 1.5L17 12l-5.5 5.5a3.5 3.5 0 1 1-5-5L12 7l-1.5-1.5L12 4z"/>
-        <path d="M9.5 12 12 9.5"/>
-      </symbol>
-      <symbol id="icon-bag" viewBox="0 0 24 24">
-        <path d="M5 8h14l-1 13H6L5 8z"/>
-        <path d="M9 10V6a3 3 0 0 1 6 0v4"/>
-      </symbol>
-      <symbol id="icon-heart" viewBox="0 0 24 24">
-        <path d="M12 21s-7-4.5-9.5-9C.5 8 3 4.5 7 4.5c2.2 0 3.6 1 5 2.5 1.4-1.5 2.8-2.5 5-2.5 4 0 6.5 3.5 4.5 7.5C19 16.5 12 21 12 21z"/>
-      </symbol>
-      <symbol id="icon-home" viewBox="0 0 24 24">
-        <path d="M3 11 12 3l9 8"/>
-        <path d="M5 10v10h14V10"/>
-        <path d="M10 20v-6h4v6"/>
-      </symbol>
-      <symbol id="icon-award" viewBox="0 0 24 24">
-        <circle cx="12" cy="8" r="5"/>
-        <path d="m9 12.5-1.5 8L12 17l4.5 3.5L15 12.5"/>
-      </symbol>
-      <symbol id="icon-users" viewBox="0 0 24 24">
-        <circle cx="9" cy="8" r="3.5"/>
-        <path d="M2.5 20c0-3.6 2.9-5.5 6.5-5.5s6.5 1.9 6.5 5.5"/>
-        <path d="M16 4.5a3.5 3.5 0 0 1 0 7"/>
-        <path d="M17.5 14.6c2 .7 4 2.4 4 5.4"/>
-      </symbol>
-      <symbol id="icon-clock" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="9"/>
-        <path d="M12 7v5l3 3"/>
-      </symbol>
-      <symbol id="icon-chip" viewBox="0 0 24 24">
-        <rect x="6" y="6" width="12" height="12" rx="1"/>
-        <path d="M12 2v4M12 18v4M2 12h4M18 12h4"/>
-        <rect x="10" y="10" width="4" height="4"/>
-      </symbol>
-      <symbol id="icon-check" viewBox="0 0 24 24">
-        <path d="m4 12 5 5L20 6"/>
-      </symbol>
-      <symbol id="icon-phone" viewBox="0 0 24 24">
-        <path d="M5 4h4l1.5 4.5-2.2 1.6a12.5 12.5 0 0 0 5.6 5.6l1.6-2.2L20 15v4a1.8 1.8 0 0 1-2 1.8A16.5 16.5 0 0 1 3.2 6 1.8 1.8 0 0 1 5 4z"/>
-      </symbol>
-      <symbol id="icon-mail" viewBox="0 0 24 24">
-        <rect x="3" y="5" width="18" height="14" rx="1"/>
-        <path d="m3 7 9 6 9-6"/>
-      </symbol>
-      <symbol id="icon-pin" viewBox="0 0 24 24">
-        <path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11z"/>
-        <circle cx="12" cy="10" r="2.5"/>
-      </symbol>
-      <symbol id="icon-linkedin" viewBox="0 0 24 24">
-        <path d="M6 9v10M4.5 6.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM9 9h3.5v1.8c.5-.9 1.7-1.8 3.4-1.8 2.2 0 4.1 1.4 4.1 4.5V19H16v-4.8c0-1.4-.8-2.2-2-2.2s-2 .8-2 2.2V19H9z"/>
-      </symbol>
-      <symbol id="icon-x" viewBox="0 0 24 24">
-        <path d="M4 4l7 8-7 8M10.5 12H20M14 8l1.5-4M14 16l1.5 4"/>
-      </symbol>
-      <symbol id="icon-facebook" viewBox="0 0 24 24">
-        <path d="M14 8h2V4h-2a4 4 0 0 0-4 4v2H8v4h2v6h4v-6h2.4l.6-4H14V8z"/>
-      </symbol>
-      <symbol id="icon-arrow" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 6l6 6-6 6"/>
-      </symbol>
-    </defs>
-  </svg>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="site-brand" href="#top">G FORCE <span>Security</span></a>
+    <a class="nav-link" href="#services">Services</a>
+    <a class="nav-link" href="#k9">K9 units</a>
+    <a class="nav-link" href="#vip">VIP protection</a>
+    <a href="#contact" class="btn btn-primary" style="text-decoration: none; white-space: nowrap; flex-shrink: 0;">Request a survey</a>
+  </nav>
 
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="G Force Security student concept - home">
-        <svg class="brand-mark" aria-hidden="true"><use href="#icon-shield-check"/></svg>
-        <span class="brand-name">G Force <span>Security</span></span>
-      </a>
-      <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
-        <ul class="nav-list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#why-us">Why Us</a></li>
-          <li><a href="#sectors">Sectors</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="header-actions">
-        <a class="btn btn-accent btn-sm" href="#contact">Get a Quote</a>
-        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
-          <span></span><span></span><span></span>
-        </button>
+  <main id="top">
+    <section style="position: relative; min-height: min(100dvh, 920px); display: flex; align-items: flex-end; overflow: hidden;">
+      <div style="position: absolute; inset: 0;">
+        <img class="photo" src="assets/img/hero-guard.jpg" alt="G Force Security officer on duty" fetchpriority="high">
       </div>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="container hero-inner">
-        <p class="hero-eyebrow">Security guarding &middot; Risk consulting &middot; Cash solutions</p>
-        <h1>Protecting People, Assets and Businesses Across Zambia</h1>
-        <p class="hero-sub">For over two decades, G Force Security has delivered trusted, professional security to government, industry, mining, retail and communities in every region of Zambia.</p>
-        <div class="hero-actions">
-          <a class="btn btn-accent" href="#contact">Request a Free Security Survey</a>
-          <a class="btn btn-outline" href="#contact">Contact Us</a>
-        </div>
-        <ul class="hero-badges" role="list">
-          <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Licensed &amp; regulated</li>
-          <li><svg aria-hidden="true"><use href="#icon-check"/></svg>24/7 control room</li>
-          <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Nationwide coverage</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section about" id="about">
-      <div class="container about-grid">
-        <div class="about-media reveal">
-          <img
-            src="assets/img/lusaka.jpg"
-            alt="Lusaka city skyline, where the company operates from its head office"
-            width="900" height="620" loading="lazy">
-          <div class="about-stamp">
-            <span class="about-stamp-num">20+</span>
-            <span class="about-stamp-label">Years on guard<br>across Zambia</span>
+      <div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, color-mix(in srgb, var(--color-neutral-900) 96%, transparent) 0%, color-mix(in srgb, var(--color-neutral-900) 60%, transparent) 55%, color-mix(in srgb, var(--color-neutral-900) 15%, transparent) 100%), linear-gradient(0deg, var(--color-neutral-900) 0%, transparent 38%);"></div>
+      <div style="position: relative; width: 100%; max-width: 1280px; margin: 0 auto; padding: 140px clamp(20px, 5vw, 64px) clamp(56px, 8vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 40px; align-items: end;">
+        <div style="display: flex; flex-direction: column; gap: 28px;">
+          <h1 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(48px, 7vw, 104px); line-height: 0.98; letter-spacing: -0.035em; margin: 0 0 0 -0.05em;">
+            <span data-hero style="display: block;">Professional.</span>
+            <span data-hero style="display: block;">Alert.</span>
+            <span data-hero style="display: block; color: var(--color-accent);">Reliable.</span>
+          </h1>
+          <p data-hero style="font-size: 18px; line-height: 1.6; max-width: 40ch; margin: 0; color: color-mix(in srgb, var(--color-bg) 84%, transparent);">Guarding, K9 units, electronic security and VIP protection for businesses and homes in Lusaka.</p>
+          <div data-hero style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <a href="#contact" class="btn btn-primary" style="text-decoration: none; white-space: nowrap; flex-shrink: 0;">Request a survey</a>
+            <a href="#services" class="btn btn-ghost" style="text-decoration: none; white-space: nowrap; flex-shrink: 0; padding: 8px 14.4px; color: var(--color-bg); border: 1px solid color-mix(in srgb, var(--color-bg) 55%, transparent);">Our services</a>
           </div>
         </div>
-        <div class="about-copy reveal">
-          <p class="section-tag">About us</p>
-          <h2>A Zambian security partner you can rely on</h2>
-          <p>G Force Security has protected people and assets across Zambia for over two decades, growing from its first roster of officers in Lusaka into one of the country&rsquo;s most respected private security providers.</p>
-          <p>Today our trained, vetted officers and specialist teams operate everywhere from the Copperbelt to the Eastern Province, serving banks, mines, government institutions, diplomatic missions and residential clients with the same discipline and care.</p>
-          <ul class="check-list">
-            <li><svg aria-hidden="true"><use href="#icon-check"/></svg>National footprint with branches in 7 major towns</li>
-            <li><svg aria-hidden="true"><use href="#icon-check"/></svg>In-house training, screening and vetting of all officers</li>
-            <li><svg aria-hidden="true"><use href="#icon-check"/></svg>Mission: integrity, reliability and technology in everything we do</li>
-          </ul>
-          <a class="btn btn-dark" href="#services">Explore our services <svg class="btn-icon" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+        <div data-hero style="justify-self: end; width: min(100%, 340px); padding: 22px 24px; background: color-mix(in srgb, var(--color-neutral-900) 55%, transparent); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid color-mix(in srgb, var(--color-bg) 18%, transparent); display: flex; flex-direction: column; gap: 14px;">
+          <span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300);">Head office</span>
+          <span style="font-size: 16px; line-height: 1.5;">Plot 48 Matandiko Street, PHI<br>Lusaka, Zambia</span>
+          <a href="mailto:gforcesecure11@gmail.com" style="font-size: 15px;">gforcesecure11@gmail.com</a>
         </div>
       </div>
     </section>
 
-    <section class="section services" id="services">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="section-tag">Our services</p>
-          <h2>Complete security solutions, under one roof</h2>
-          <p class="section-lede">From guarding and risk advice to cash logistics and electronic security, we design protection that fits your operation.</p>
-        </div>
-        <div class="card-grid">
-          <article class="card reveal">
-            <div class="card-icon"><svg aria-hidden="true"><use href="#icon-shield"/></svg></div>
-            <h3>Security Guarding</h3>
-            <p>Uniformed static and mobile guarding for offices, retail, industrial and residential sites, supported by supervision, monitoring and incident response.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card-icon"><svg aria-hidden="true"><use href="#icon-chart"/></svg></div>
-            <h3>Risk Management &amp; Consulting</h3>
-            <p>Security audits, threat assessments and custom protection plans that help you understand exposure and strengthen your defences before issues arise.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card-icon"><svg aria-hidden="true"><use href="#icon-coins"/></svg></div>
-            <h3>Cash-in-Transit &amp; Cash Solutions</h3>
-            <p>Armoured cash movement, ATM replenishment and managed cash services delivered with strict procedure, tracking and accountability.</p>
-          </article>
-          <article class="card reveal">
-            <div class="card-icon"><svg aria-hidden="true"><use href="#icon-cctv"/></svg></div>
-            <h3>Electronic Security</h3>
-            <p>CCTV, intruder alarms, access control and remote monitoring that keep you informed and in control, 24 hours a day.</p>
-          </article>
-        </div>
+    <section id="services" style="max-width: 1280px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 5vw, 64px);">
+      <h2 data-reveal style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(34px, 4.4vw, 60px); line-height: 1.02; letter-spacing: -0.03em; margin: 0 0 18px; max-width: 16ch;">Every layer of protection, from one team.</h2>
+      <p data-reveal style="font-size: 17px; line-height: 1.6; margin: 0 0 48px; max-width: 52ch; color: color-mix(in srgb, var(--color-bg) 72%, transparent);">Officers, dogs and technology deployed together, so nothing on your site goes unwatched.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px;">
+        <article data-reveal style="background: var(--color-neutral-800); display: flex; flex-direction: column;">
+          <div style="aspect-ratio: 4 / 3; position: relative; overflow: hidden;"><img class="photo" src="assets/img/team.png" alt="G Force Security guarding officers" loading="lazy"></div>
+          <div style="padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 22px; letter-spacing: -0.01em; margin: 0;">Manned guarding</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-bg) 72%, transparent);">Uniformed officers for offices, retail, industrial sites and residences, supervised on every shift.</p>
+          </div>
+        </article>
+        <article data-reveal style="background: var(--color-neutral-800); display: flex; flex-direction: column;">
+          <div style="aspect-ratio: 4 / 3; position: relative; overflow: hidden;"><img class="photo" src="assets/img/k9-handler.jpg" alt="G Force Security K9 handler with dog" loading="lazy"></div>
+          <div style="padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 22px; letter-spacing: -0.01em; margin: 0;">K9 units</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-bg) 72%, transparent);">Trained security dogs working beside our officers for patrol, deterrence and detection.</p>
+          </div>
+        </article>
+        <article data-reveal style="background: var(--color-neutral-800); display: flex; flex-direction: column;">
+          <div class="img-panel" style="aspect-ratio: 4 / 3; position: relative;">
+            <svg viewBox="0 0 24 24" role="img" aria-label="CCTV camera placeholder">
+              <rect x="3" y="9" width="12" height="10" rx="1"/>
+              <path d="M15 9l4-2v8l-4-2"/>
+              <path d="M9 19v-5M9 9v2"/>
+              <circle cx="9" cy="14" r="1"/>
+            </svg>
+          </div>
+          <div style="padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 22px; letter-spacing: -0.01em; margin: 0;">CCTV and alarms</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-bg) 72%, transparent);">Camera surveillance and intruder alarms that extend what your guards can see and hear.</p>
+          </div>
+        </article>
+        <article data-reveal style="background: var(--color-neutral-800); display: flex; flex-direction: column;">
+          <div class="img-panel" style="aspect-ratio: 4 / 3; position: relative;">
+            <svg viewBox="0 0 24 24" role="img" aria-label="VIP protection placeholder">
+              <path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z"/>
+              <path d="m9 11.5 2 2 4-4"/>
+            </svg>
+          </div>
+          <div style="padding: 22px 22px 26px; display: flex; flex-direction: column; gap: 10px;">
+            <h3 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 22px; letter-spacing: -0.01em; margin: 0;">VIP protection</h3>
+            <p style="margin: 0; font-size: 15px; line-height: 1.6; color: color-mix(in srgb, var(--color-bg) 72%, transparent);">Close protection and escorted movement for executives, officials and guests.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section class="section why" id="why-us">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="section-tag">Why choose us</p>
-          <h2>Trusted by the institutions that can&rsquo;t afford to guess</h2>
+    <section id="k9" style="position: relative; overflow: hidden; border-top: 1px solid color-mix(in srgb, var(--color-bg) 12%, transparent);">
+      <div style="position: absolute; width: 900px; height: 900px; right: -320px; top: -280px; pointer-events: none; background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 30%, transparent) 0%, transparent 62%);"></div>
+      <div style="position: relative; max-width: 1280px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: clamp(40px, 6vw, 96px); align-items: start;">
+        <div data-reveal style="display: flex; flex-direction: column; gap: 24px;">
+          <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(34px, 4.4vw, 60px); line-height: 1.02; letter-spacing: -0.03em; margin: 0; max-width: 13ch;">Guards and dogs. Working as one.</h2>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0; max-width: 44ch; color: color-mix(in srgb, var(--color-bg) 78%, transparent);">Each K9 is paired with a skilled officer and trained continuously in obedience, controlled response and threat detection. With CCTV and alarms alongside, your site has no blind side.</p>
         </div>
-        <div class="stats-bar reveal" aria-label="Company statistics">
-          <div class="stat">
-            <span class="stat-num count" data-target="20" data-suffix="+">0</span>
-            <span class="stat-label">Years in operation</span>
+        <div style="display: grid; gap: 12px;">
+          <div data-reveal style="aspect-ratio: 4 / 3; position: relative; overflow: hidden;"><img class="photo" src="assets/img/k9-portrait.png" alt="G Force Security K9 German Shepherd portrait" loading="lazy"></div>
+          <div data-reveal style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: baseline; padding: 24px 26px; background: color-mix(in srgb, var(--color-bg) 6%, transparent); border: 1px solid color-mix(in srgb, var(--color-bg) 12%, transparent);">
+            <span style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 24px; letter-spacing: -0.01em;">German Shepherd</span>
+            <span style="font-size: 14px; color: color-mix(in srgb, var(--color-bg) 70%, transparent);">Patrol and detection</span>
           </div>
-          <div class="stat">
-            <span class="stat-num count" data-target="7">0</span>
-            <span class="stat-label">Branches nationwide</span>
+          <div data-reveal style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: baseline; padding: 24px 26px; background: color-mix(in srgb, var(--color-bg) 6%, transparent); border: 1px solid color-mix(in srgb, var(--color-bg) 12%, transparent);">
+            <span style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 24px; letter-spacing: -0.01em;">Rottweiler</span>
+            <span style="font-size: 14px; color: color-mix(in srgb, var(--color-bg) 70%, transparent);">Perimeter deterrence</span>
           </div>
-          <div class="stat">
-            <span class="stat-num count" data-target="1200" data-suffix="+">0</span>
-            <span class="stat-label">Officers &amp; staff</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num count" data-target="6">0</span>
-            <span class="stat-label">Sectors served</span>
-          </div>
-        </div>
-        <div class="trust-grid">
-          <div class="trust-item reveal">
-            <div class="trust-icon"><svg aria-hidden="true"><use href="#icon-award"/></svg></div>
-            <h3>Fully licensed</h3>
-            <p>Registered and compliant with Zambian private security regulations at every branch.</p>
-          </div>
-          <div class="trust-item reveal">
-            <div class="trust-icon"><svg aria-hidden="true"><use href="#icon-users"/></svg></div>
-            <h3>Vetted &amp; trained</h3>
-            <p>Officers screened, background-checked and drilled in our own academy before deployment.</p>
-          </div>
-          <div class="trust-item reveal">
-            <div class="trust-icon"><svg aria-hidden="true"><use href="#icon-clock"/></svg></div>
-            <h3>24/7 response</h3>
-            <p>A manned control room and rapid-deployment teams responsive in any province.</p>
-          </div>
-          <div class="trust-item reveal">
-            <div class="trust-icon"><svg aria-hidden="true"><use href="#icon-chip"/></svg></div>
-            <h3>Technology-led</h3>
-            <p>GPS tracking, electronic surveillance and digital reporting raise the standard of every shift.</p>
+          <div data-reveal style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: baseline; padding: 24px 26px; background: color-mix(in srgb, var(--color-bg) 6%, transparent); border: 1px solid color-mix(in srgb, var(--color-bg) 12%, transparent);">
+            <span style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: 24px; letter-spacing: -0.01em;">Belgian Malinois</span>
+            <span style="font-size: 14px; color: color-mix(in srgb, var(--color-bg) 70%, transparent);">Rapid response</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section sectors" id="sectors">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="section-tag">Sectors served</p>
-          <h2>Specialists in the sectors that shape Zambia</h2>
-        </div>
-        <div class="sector-grid">
-          <div class="sector-item reveal">
-            <div class="sector-icon"><svg aria-hidden="true"><use href="#icon-landmark"/></svg></div>
-            <h3>Government</h3>
-            <p>Facilities, estates and public assets</p>
-          </div>
-          <div class="sector-item reveal">
-            <div class="sector-icon"><svg aria-hidden="true"><use href="#icon-bank"/></svg></div>
-            <h3>Financial Institutions</h3>
-            <p>Banks, branches and cash handling</p>
-          </div>
-          <div class="sector-item reveal">
-            <div class="sector-icon"><svg aria-hidden="true"><use href="#icon-pickaxe"/></svg></div>
-            <h3>Mining</h3>
-            <p>Sites, logistics and Copperbelt operations</p>
-          </div>
-          <div class="sector-item reveal">
-            <div class="sector-icon"><svg aria-hidden="true"><use href="#icon-bag"/></svg></div>
-            <h3>Retail</h3>
-            <p>Stores, malls and distribution</p>
-          </div>
-          <div class="sector-item reveal">
-            <div class="sector-icon"><svg aria-hidden="true"><use href="#icon-heart"/></svg></div>
-            <h3>NGOs &amp; Aid Programmes</h3>
-            <p>Field teams and compound operations</p>
-          </div>
-          <div class="sector-item reveal">
-            <div class="sector-icon"><svg aria-hidden="true"><use href="#icon-home"/></svg></div>
-            <h3>Residential</h3>
-            <p>Private estates and embassies</p>
+    <section id="vip" style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 64px) clamp(72px, 9vw, 120px);">
+      <div data-reveal style="position: relative; min-height: 520px; display: flex; align-items: flex-end; overflow: hidden; background: radial-gradient(130% 130% at 85% 0%, color-mix(in srgb, var(--color-accent) 28%, transparent), transparent 55%), var(--color-neutral-800);">
+        <div style="position: absolute; inset: 0; pointer-events: none; background: linear-gradient(0deg, color-mix(in srgb, var(--color-neutral-900) 92%, transparent) 8%, transparent 70%);"></div>
+        <div style="position: relative; padding: clamp(28px, 5vw, 56px); padding-bottom: clamp(48px, 6vw, 64px); display: flex; flex-direction: column; gap: 20px; max-width: 640px;">
+          <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(34px, 4.4vw, 60px); line-height: 1.02; letter-spacing: -0.03em; margin: 0;">Every movement secured.</h2>
+          <p style="font-size: 17px; line-height: 1.6; margin: 0; max-width: 44ch; color: color-mix(in srgb, var(--color-bg) 84%, transparent);">Route planning, escort vehicles and close protection officers for delegations, executives and events.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <a href="#contact" class="btn btn-primary" style="text-decoration: none; white-space: nowrap; flex-shrink: 0;">Plan a protection detail</a>
+            <a href="mailto:gforcesecure11@gmail.com" class="btn btn-ghost" style="text-decoration: none; white-space: nowrap; flex-shrink: 0; padding: 8px 14.4px; color: var(--color-bg); border: 1px solid color-mix(in srgb, var(--color-bg) 55%, transparent);">Email us</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section testimonials" id="testimonials">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="section-tag">Testimonials</p>
-          <h2>What our clients say</h2>
-        </div>
-        <div class="quote-grid">
-          <blockquote class="quote reveal">
-            <div class="quote-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>&ldquo;Their officers have protected our retail premises across Lusaka for years &mdash; professional, reliable and always on time.&rdquo;</p>
-            <footer>Operations Manager, national retail group &middot; Lusaka</footer>
-          </blockquote>
-          <blockquote class="quote reveal">
-            <div class="quote-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>&ldquo;Their cash-in-transit team gives us total peace of mind. Zero incidents since the first day of our partnership.&rdquo;</p>
-            <footer>Finance Director, financial institution &middot; Kitwe</footer>
-          </blockquote>
-          <blockquote class="quote reveal">
-            <div class="quote-stars" aria-label="Rated 5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-            <p>&ldquo;A responsive, well-trained partner who genuinely understands risk on the Copperbelt. A clear step above the rest.&rdquo;</p>
-            <footer>Site Manager, mining services &middot; Solwezi</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact" id="contact">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="section-tag">Contact us</p>
-          <h2>Request a free security survey</h2>
-          <p class="section-lede">Tell us about your premises and requirements &mdash; our team will respond within one working day.</p>
-        </div>
-        <div class="contact-grid">
-          <form class="contact-form reveal" id="contact-form">
-            <div class="form-row">
-              <div class="field">
-                <label for="field-name">Full name</label>
-                <input type="text" id="field-name" name="name" autocomplete="name" required>
-              </div>
-              <div class="field">
-                <label for="field-company">Company / organisation</label>
-                <input type="text" id="field-company" name="company" autocomplete="organization">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="field">
-                <label for="field-email">Email address</label>
-                <input type="email" id="field-email" name="email" autocomplete="email" required>
-              </div>
-              <div class="field">
-                <label for="field-phone">Phone number</label>
-                <input type="tel" id="field-phone" name="phone" autocomplete="tel">
-              </div>
-            </div>
-            <div class="field">
-              <label for="field-message">How can we help?</label>
-              <textarea id="field-message" name="message" rows="5" required></textarea>
-            </div>
-            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
-            <button class="btn btn-accent btn-full" type="submit" id="form-submit">Send enquiry</button>
-            <p class="form-note">Prefer email? Write to us directly at <a href="mailto:info@gforcesecurity.zm">info@gforcesecurity.zm</a></p>
-            <noscript><p class="form-note">JavaScript is disabled &mdash; email us directly at <a href="mailto:info@gforcesecurity.zm">info@gforcesecurity.zm</a> or call <a href="tel:+260211123456">+260 211 123 456</a>.</p></noscript>
-          </form>
-
-          <div class="contact-info reveal">
-            <ul class="contact-list">
-              <li>
-                <span class="contact-icon"><svg aria-hidden="true"><use href="#icon-pin"/></svg></span>
-                <div><strong>Head office</strong><br>Plot 12, Great North Road<br>Lusaka, Zambia</div>
-              </li>
-              <li>
-                <span class="contact-icon"><svg aria-hidden="true"><use href="#icon-phone"/></svg></span>
-                <div><strong>Phone</strong><br><a href="tel:+260211123456">+260 211 123 456</a></div>
-              </li>
-              <li>
-                <span class="contact-icon"><svg aria-hidden="true"><use href="#icon-mail"/></svg></span>
-                <div><strong>Email</strong><br><a href="mailto:info@gforcesecurity.zm">info@gforcesecurity.zm</a></div>
-              </li>
-            </ul>
-            <h3>Branches nationwide</h3>
-            <ul class="branch-list">
-              <li>Lusaka &mdash; Head Office</li>
-              <li>Kitwe</li>
-              <li>Ndola</li>
-              <li>Solwezi</li>
-              <li>Chipata</li>
-              <li>Kabwe</li>
-              <li>Livingstone</li>
-            </ul>
-            <div class="map-wrap">
-              <iframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=28.1700%2C-15.5200%2C28.4800%2C-15.2400&layer=mapnik&marker=-15.3875%2C28.3228"
-                title="Map showing the Lusaka head office area"
-                loading="lazy"></iframe>
-            </div>
+    <section id="contact" style="border-top: 1px solid color-mix(in srgb, var(--color-bg) 12%, transparent);">
+      <div style="max-width: 1280px; margin: 0 auto; padding: clamp(72px, 9vw, 120px) clamp(20px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(40px, 6vw, 96px);">
+        <div data-reveal style="display: flex; flex-direction: column; gap: 28px;">
+          <h2 style="font-family: var(--font-heading); font-weight: var(--font-heading-weight); font-size: clamp(34px, 4.4vw, 60px); line-height: 1.02; letter-spacing: -0.03em; margin: 0; max-width: 12ch;">Request a security survey.</h2>
+          <p style="font-size: 17px; line-height: 1.65; margin: 0; max-width: 40ch; color: color-mix(in srgb, var(--color-bg) 78%, transparent);">Tell us about your site. We will assess it and recommend the right mix of officers, K9 and technology.</p>
+          <div style="display: grid; gap: 18px; padding-top: 8px;">
+            <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300);">Office</span><span style="line-height: 1.5;">Plot 48 Matandiko Street, PHI, Lusaka</span></div>
+            <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300);">Email</span><a href="mailto:gforcesecure11@gmail.com">gforcesecure11@gmail.com</a></div>
+            <div style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent-300);">Facebook</span><a href="https://www.facebook.com/GFORCEsecure/" target="_blank" rel="noopener">facebook.com/GFORCEsecure</a></div>
           </div>
         </div>
+
+        <form data-reveal id="contact-form" novalidate style="display: flex; flex-direction: column; gap: 18px; align-self: start; padding: clamp(24px, 3vw, 36px); background: var(--color-neutral-800); border: 1px solid color-mix(in srgb, var(--color-bg) 10%, transparent);">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 18px;">
+            <div style="display: flex; flex-direction: column; gap: 8px;"><label for="v2-name" style="font-size: 14px; color: color-mix(in srgb, var(--color-bg) 82%, transparent);">Full name</label><input class="input" id="v2-name" name="name" autocomplete="name" required style="background: var(--color-neutral-900); color: var(--color-bg); border: 1px solid color-mix(in srgb, var(--color-bg) 22%, transparent);"></div>
+            <div style="display: flex; flex-direction: column; gap: 8px;"><label for="v2-company" style="font-size: 14px; color: color-mix(in srgb, var(--color-bg) 82%, transparent);">Company</label><input class="input" id="v2-company" name="company" autocomplete="organization" style="background: var(--color-neutral-900); color: var(--color-bg); border: 1px solid color-mix(in srgb, var(--color-bg) 22%, transparent);"></div>
+          </div>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 18px;">
+            <div style="display: flex; flex-direction: column; gap: 8px;"><label for="v2-email" style="font-size: 14px; color: color-mix(in srgb, var(--color-bg) 82%, transparent);">Email</label><input class="input" id="v2-email" name="email" type="email" autocomplete="email" required style="background: var(--color-neutral-900); color: var(--color-bg); border: 1px solid color-mix(in srgb, var(--color-bg) 22%, transparent);"></div>
+            <div style="display: flex; flex-direction: column; gap: 8px;"><label for="v2-phone" style="font-size: 14px; color: color-mix(in srgb, var(--color-bg) 82%, transparent);">Phone</label><input class="input" id="v2-phone" name="phone" type="tel" autocomplete="tel" style="background: var(--color-neutral-900); color: var(--color-bg); border: 1px solid color-mix(in srgb, var(--color-bg) 22%, transparent);"></div>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 8px;"><label for="v2-message" style="font-size: 14px; color: color-mix(in srgb, var(--color-bg) 82%, transparent);">What do you need protected?</label><textarea class="input" id="v2-message" name="message" rows="5" required style="min-height: 110px; resize: vertical; font: inherit; background: var(--color-neutral-900); color: var(--color-bg); border: 1px solid color-mix(in srgb, var(--color-bg) 22%, transparent);"></textarea></div>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <button type="submit" class="btn btn-primary" id="form-submit" style="white-space: nowrap;">Send request</button>
+            <span style="font-size: 13px; color: color-mix(in srgb, var(--color-bg) 60%, transparent);">Or write to <a href="mailto:gforcesecure11@gmail.com">gforcesecure11@gmail.com</a></span>
+          </div>
+          <noscript><p style="margin: 0; font-size: 13px;">JavaScript is disabled &mdash; email us directly at <a href="mailto:gforcesecure11@gmail.com">gforcesecure11@gmail.com</a>.</p></noscript>
+        </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col">
-        <a class="brand brand-footer" href="#top">
-          <svg class="brand-mark" aria-hidden="true"><use href="#icon-shield-check"/></svg>
-          <span class="brand-name">G Force <span>Security</span></span>
-        </a>
-        <p>Student concept modelled on a Zambian security company &mdash; guarding, risk consulting, cash solutions and electronic security across the country.</p>
-        <ul class="social-list">
-          <li><a href="#" aria-label="G Force Security concept on LinkedIn"><svg aria-hidden="true"><use href="#icon-linkedin"/></svg></a></li>
-          <li><a href="#" aria-label="G Force Security concept on X"><svg aria-hidden="true"><use href="#icon-x"/></svg></a></li>
-          <li><a href="#" aria-label="G Force Security concept on Facebook"><svg aria-hidden="true"><use href="#icon-facebook"/></svg></a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Company</h3>
-        <ul class="footer-links">
-          <li><a href="#about">About us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#why-us">Why choose us</a></li>
-          <li><a href="#sectors">Sectors served</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Branches</h3>
-        <ul class="footer-links">
-          <li>Lusaka &mdash; Head Office</li>
-          <li>Kitwe</li>
-          <li>Ndola</li>
-          <li>Solwezi</li>
-          <li>Chipata &middot; Kabwe &middot; Livingstone</li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h3>Get in touch</h3>
-        <ul class="footer-links">
-          <li>Plot 12, Great North Road</li>
-          <li>Lusaka, Zambia</li>
-          <li><a href="tel:+260211123456">+260 211 123 456</a></li>
-          <li><a href="mailto:info@gforcesecurity.zm">info@gforcesecurity.zm</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; <span id="footer-year">2026</span> Student concept site. Placeholder content only &mdash; not affiliated with any real company.</p>
-      </div>
+  <footer style="border-top: 1px solid color-mix(in srgb, var(--color-bg) 12%, transparent);">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 32px clamp(20px, 5vw, 64px); display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; font-size: 14px; color: color-mix(in srgb, var(--color-bg) 68%, transparent);">
+      <span>&copy; <span id="footer-year"></span> G Force Security Limited. Lusaka, Zambia.</span>
+      <span>Careers: apply via <a href="mailto:gforcesecure11@gmail.com">gforcesecure11@gmail.com</a></span>
+      <span>Student concept placeholder &mdash; not affiliated with any real company.</span>
     </div>
   </footer>
 

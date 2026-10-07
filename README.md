@@ -7,23 +7,28 @@ A student coursework project: a static website for **G Force Security**, a ficti
 ## Stack
 
 - Plain HTML, CSS, vanilla JavaScript. No build step, no runtime server, no database.
-- Contact form handled by a [Cloudflare Pages Function](https://developers.cloudflare.com/pages/functions/) (`/functions/contact.js`), which forwards submissions to a third-party endpoint (e.g. Formspree) set via an environment variable. If the Page Function is unreachable or unconfigured, the browser falls back to a `mailto:` link (addressed to `info@gforcesecurity.zm`).
+- Contact form handled by a [Cloudflare Pages Function](https://developers.cloudflare.com/pages/functions/) (`/functions/contact.js`), which forwards submissions to a third-party endpoint (e.g. Formspree) set via an environment variable. If the Page Function is unreachable or unconfigured, the browser falls back to a `mailto:` link (addressed to `gforcesecure11@gmail.com`).
 - The page intentionally includes a visible "student concept, not affiliated with any real company" banner and a `noindex, nofollow` robots meta tag.
 
 ## Project structure
 
 ```
-├── index.html            # Single-page site (Hero, About, Services, Why Us, Sectors, Testimonials, Contact, Footer)
-├── css/
-│   └── style.css         # Mobile-first responsive styles
+├── index.html            # Single-page site — the "Modernist" v2 design, exported to clean static HTML
+├── _ds/                  # "Modernist" design-system tokens + component CSS used by index.html
+├── "G Force Security v2.dc.html"   # Design-tool source for the v2 layout (not deployed as homepage)
+├── "G Force Security.dc.html"      # Earlier design-tool source version
 ├── js/
-│   └── main.js           # Sticky header, mobile nav, scroll reveal, animated counters, form logic
+│   └── main.js           # Hero + scroll-reveal animations and contact form logic
 ├── functions/
 │   └── contact.js        # Cloudflare Pages Function → POST /contact
 ├── assets/
-│   └── favicon.svg
+│   ├── favicon.svg
+│   └── img/              # hero-guard, lusaka, team, k9 images
+├── github.md
 └── README.md
 ```
+
+> The `.dc.html`, `support.js`, `image-slot.js` and `uploads/` files are artifacts of the design tool the v2 layout was created in. `index.html` is a hand-exported, self-contained static version and does not depend on them.
 
 ## Run locally
 
@@ -75,15 +80,14 @@ npx wrangler pages deploy . --project-name secureguard-zambia
 
 ## Replacing placeholder imagery
 
-The hero and About images live in `assets/img/` (`hero-guard.jpg`, `lusaka.jpg`). Replace them with your own licensed photos when you have access to actual imagery (keep the same filenames or update the references):
+Images live in `assets/img/` (`hero-guard.jpg`, `team.png`, `k9-handler.jpg`, `k9-portrait.png`, `lusaka.jpg`). The CCTV and VIP card visuals are SVG placeholders in `index.html`. Replace them with licensed photos when you have access to actual imagery (keep the same filenames or update the references):
 
-1. Add files under `assets/img/` (e.g. `hero-guard.jpg`, `team.jpg`).
-2. In `css/style.css`, change the `url(...)` in the `.hero` background rule.
-3. In `index.html`, update the `src` of the About `<img>` and its `alt` text.
+1. Add files under `assets/img/`.
+2. Update `src` attributes in `index.html`.
 
 ## Content notes
 
-- Every fact on the page is fictional placeholder content: the company, founding year, address, phone, email, branch list, quotes, staff counts and statistics are illustrative only — including the animated counters.
+- Every fact on the page is fictional placeholder content: the company, founding year, address, phone, email, client names and statistics are illustrative only.
 - The copy, layout and behaviour are inspired by the design brief for a fictional security brand; no real company, logo or text is reproduced.
 - Images are royalty-free **Wikimedia Commons** photos stored locally under `assets/img/` (hero: South African security guard; about: Lusaka skyline). They were selected from file titles (the author could not preview the images), so treat them as provisional and swap in licensed photos before any wider use.
 - Do NOT ship to production, register the brand, or pass any of this off as a real company. The site exists purely to demonstrate front-end skills for coursework.
